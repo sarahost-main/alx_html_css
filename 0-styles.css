@@ -1,0 +1,141 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --primary-color: #FF6565;
+    --dark-color: #071629;
+    --max-width: 1000px;
+}
+
+/* GLOBAL */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-desktop a {
+      color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    
+}
+.nav-desktop a:hover,
+.nav-desktop a:active {
+    color: var(--primary-color); /* #FF6565 */
+}
+
+/* Mobile menu hidden by default (you will add media queries later) */
+.nav-mobile {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    background-image: url("headphones/images/headphones_hero_1.jpg"); /* replace with your file name */
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255); /* Hero text is white */
+    padding: 200px 0; /* Adjust after checking Figma */
+    text-align: center;
+}
+
+header {
+  position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer {
+    background-color: var(--dark-color);
+}
+
+.hero-title {
+     font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.hero-subtitle {
+   font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.btn-primary {
+   font-size: 14px;
+    padding: 12px 38px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.hero-text {
+      font-size: 16px;
+    line-height: 1;
+    max-width: 600px;
+    padding: 80px 38px;
+  
+}
+@media (max-width: 480px) {
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+
+    .header-container {
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero {
+        padding: 140px 0; /* smaller height for mobile */
+    }
+}
+
