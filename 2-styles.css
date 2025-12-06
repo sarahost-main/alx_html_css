@@ -141,3 +141,139 @@ footer {
     }
 }
 
+/* WHAT WE DO SECTION */
+.what-we-do {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.what-we-do h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+    font-size: 16px;
+    color: #888;
+}
+
+.services {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    flex: 1 1 200px;
+    max-width: 220px;
+}
+
+.service-item .icon {
+    font-size: 70px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+    color: #555;
+}
+.icon {
+    font-family: "holberton_school-icon";
+    font-size: 70px;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+
+/* MOBILE */
+@media (max-width: 480px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        max-width: 300px;
+    }
+}
+
+
+
+/* OUR RESULTS SECTION WITH BACKGROUND IMAGE */
+.our-results {
+    width: 100%;
+    padding: 80px 0;
+
+    background-image: url("headphones/images/headphones_hero_2.jpg");
+    background-size: cover;        /* fills entire width */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;  /* removes tiling */
+}
+
+.our-results h2,
+.our-results .section-desc {
+    color: white;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+/* SHAPE (diamond) */
+.result-shape {
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-shape h3,
+.result-shape p {
+    transform: rotate(-45deg);
+}
+
+.result-shape h3 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.result-shape p {
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-shape {
+        width: 120px;
+        height: 120px;
+    }
+}
